@@ -1,0 +1,349 @@
+# Instincts generated from https://github.com/dyzmj/soybean-admin
+# Generated: 2026-05-13T12:10:19.876Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: soybean-admin-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: fix, chore, refactor, optimize, docs
+
+## Evidence
+
+- 8 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore(deps): update deps, fix(projects): fix ts and lint error
+
+---
+id: soybean-admin-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Commit Length
+
+## Action
+
+Write moderate-length commit messages (~56 characters)
+
+## Evidence
+
+- Average commit message length: 56 chars
+- Based on 8 commits
+
+---
+id: soybean-admin-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: soybean-admin-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: soybean-admin-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: soybean-admin-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: soybean-admin-workflow-dependency-update-workflow
+trigger: "when doing dependency update workflow"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Workflow Dependency Update Workflow
+
+## Action
+
+Follow the dependency-update-workflow workflow:
+1. Update version numbers in package.json files across packages.
+2. Update the pnpm-lock.yaml lockfile to reflect new dependency versions.
+3. Commit all updated package.json and lockfile files.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, packages/*/package.json, pnpm-lock.yaml
+
+---
+id: soybean-admin-workflow-github-workflow-update
+trigger: "when doing github workflow update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/dyzmj/soybean-admin
+---
+
+# Soybean Admin Workflow Github Workflow Update
+
+## Action
+
+Follow the github-workflow-update workflow:
+1. Edit .github/workflows/*.yml files to update action versions or workflow logic.
+2. Commit the updated workflow files.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/workflows/*.yml
+
+---
+id: soybean-admin-instinct-naming
+trigger: "When naming files, functions, classes, or constants in TypeScript code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Naming
+
+## Action
+
+Use camelCase for files and functions, PascalCase for classes, and SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions
+- Seen in commit: refactor(hooks): simplify useContext implementation and improve type definitions
+
+---
+id: soybean-admin-instinct-imports
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Imports
+
+## Action
+
+Use alias import style as defined in project configuration
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: soybean-admin-instinct-exports
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Exports
+
+## Action
+
+Use named exports instead of default exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: soybean-admin-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Commit Format
+
+## Action
+
+Use conventional commits with prefixes: fix, chore, refactor, optimize, docs, followed by (scope): message
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commit: fix(projects): fix ts and lint error
+
+---
+id: soybean-admin-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 56 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: soybean-admin-instinct-dependency-update-workflow
+trigger: "When someone wants to update dependencies to their latest versions"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Dependency Update Workflow
+
+## Action
+
+Update all package.json files and pnpm-lock.yaml, then commit the changes together
+
+## Evidence
+
+- Workflow: dependency-update-workflow
+- Seen in commits: chore(deps): update deps
+
+---
+id: soybean-admin-instinct-github-workflow-update
+trigger: "When someone wants to update or fix GitHub Actions workflows"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Github Workflow Update
+
+## Action
+
+Edit .github/workflows/*.yml to update action versions or logic, then commit the updated files
+
+## Evidence
+
+- Workflow: github-workflow-update
+- Seen in commit: fix(workflows): update actions/checkout and actions/setup-node to v6
+
+---
+id: soybean-admin-instinct-error-handling
+trigger: "When handling errors in TypeScript code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Error Handling
+
+## Action
+
+Use try-catch blocks for error handling; do not implement custom error classes or global error handlers
+
+## Evidence
+
+- Pattern in errorHandling.style
+
+---
+id: soybean-admin-instinct-test-location
+trigger: "When adding or organizing test files"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: dyzmj/soybean-admin
+---
+
+# Soybean Admin Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
